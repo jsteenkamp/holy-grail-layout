@@ -1,0 +1,58 @@
+html, body {
+  margin: 0;
+  font-family: sans-serif; }
+
+* {
+  margin: 0; }
+
+body {
+  height: 100%;
+  width: 100%; }
+
+header {
+  background: tomato;
+  height: 132px;
+  overflow: hidden; }
+  header p {
+    padding: 16px; }
+
+section {
+  min-height: calc(100% - 132px);
+  margin-bottom: -132px; }
+  section::after {
+    content: "";
+    display: block;
+    height: 132px; }
+
+nav, article, aside {
+  float: left;
+  box-sizing: border-box;
+  padding: 16px; }
+
+.content::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+nav {
+  background: deepskyblue;
+  width: 30%; }
+
+article {
+  background: lightgreen;
+  width: 40%; }
+
+aside {
+  background: gold;
+  width: 30%; }
+
+footer {
+  background: hotpink;
+  height: 132px; }
+  footer p {
+    padding: 16px; }
+
+p::after {
+  content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."; }
+
+/*# sourceMappingURL=styles.css.map */

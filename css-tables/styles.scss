@@ -1,0 +1,68 @@
+
+@import "../base";
+
+
+@mixin set-padding($pad) {
+  padding: $pad;
+}
+
+
+body {
+  height: 100%;
+  display: table;
+  width: 100%;
+}
+
+header {
+  background: map-get($colors, header);
+  display: table-row;
+  min-height: 64px;
+
+  p {
+    margin: 16px;
+  }
+}
+
+section {
+  height: 100%;
+  display: table;
+  width: 100%;
+  background: map-get($colors, article);
+}
+
+%column {
+  display: table-cell;
+}
+
+nav {
+  @extend %column;
+  background: map-get($colors, nav);
+  width: 20%;
+  @include set-padding(16px);
+}
+
+article {
+  @extend %column;
+  @include set-padding(16px);
+}
+
+aside {
+  @extend %column;
+  background: map-get($colors, aside);
+  width: 20%;
+  @include set-padding(16px);
+}
+
+footer {
+  background: map-get($colors, footer);
+  display: table-row;
+  min-height: 48px;
+
+  p {
+    margin: 16px;
+  }
+}
+
+p::after {
+  content: $ipsum;
+}

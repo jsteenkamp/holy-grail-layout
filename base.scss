@@ -1,0 +1,42 @@
+// variables
+$color-header: tomato;
+$color-article: lightgreen;
+$color-nav: deepskyblue;
+$color-aside: gold;
+$color-footer: hotpink;
+
+
+// variable map - use map-get($colors, header) to access value of header
+$colors: (
+  header: tomato,
+  article: lightgreen,
+  nav: deepskyblue,
+  aside: gold,
+  footer: hotpink
+);
+
+$ipsum: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+
+
+
+// this is a partial
+html, body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+* {
+  margin: 0;
+}
+
+// mixin (can accept parameter: default)
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+// https://github.com/mastastealth/sass-flex-mixin/blob/master/_flexbox.scss

@@ -1,0 +1,84 @@
+
+@import "../base";
+
+$header-height: 132px;
+$footer-height: 132px;
+
+@mixin set-padding($pad) {
+  padding: $pad;
+}
+
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+header {
+  background: map-get($colors, header);
+  height: $header-height;
+  overflow: hidden;
+
+  p {
+    @include set-padding(16px);
+  }
+}
+
+
+// do not need to use calc - tip: you need to more the header inside the section
+section {
+  min-height: calc(100% - #{$footer-height});
+  margin-bottom: -$footer-height;
+
+  &::after {
+    content: "";
+    display: block;
+    height: $footer-height;
+  }
+}
+
+%column {
+  float: left;
+  box-sizing: border-box;
+  @include set-padding(16px);
+}
+
+.content {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+nav {
+  @extend %column;
+  background: map-get($colors, nav);
+  width: 30%;
+}
+
+article {
+  @extend %column;
+  background: map-get($colors, article);
+  width: 40%;
+}
+
+aside {
+  @extend %column;
+  background: map-get($colors, aside);
+  width: 30%;
+}
+
+footer {
+  background: map-get($colors, footer);
+  height: $footer-height;
+
+  p {
+    @include set-padding(16px);
+  }
+}
+
+p::after {
+  content: $ipsum;
+}

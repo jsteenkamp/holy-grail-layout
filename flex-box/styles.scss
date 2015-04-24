@@ -1,0 +1,58 @@
+
+@import "../base";
+
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    @include flexbox;
+    flex-direction: column;
+}
+
+
+header {
+    background: map-get($colors, header);
+    flex: 0 0 auto;
+    padding: 16px;
+}
+
+section {
+    flex: 1 0 auto;
+    @include flexbox;
+    flex-direction: row;
+}
+
+article {
+    background: map-get($colors, article);
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 16px;
+}
+
+nav {
+    background: map-get($colors, nav);
+    flex: 0 0 200px;
+    order: -1;
+    padding: 16px;
+}
+
+aside {
+    background: map-get($colors, aside);
+    flex: 0 0 200px;
+    padding: 16px;
+}
+
+footer {
+    background: map-get($colors, footer);
+    flex: 0 0 100px;
+    padding: 16px;
+}
+
+
+p::after {
+  content: $ipsum;
+}
