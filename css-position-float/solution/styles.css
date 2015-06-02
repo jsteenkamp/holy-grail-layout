@@ -6,35 +6,41 @@ html, body {
 /* layout containers */
 
 .header {
+    float: left;
     background: tomato;
 }
 
 .nav {
+    width: 20%;
     background: deepskyblue;
 }
 
 .article {
+    width: 50%;
     background: lightgreen;
 }
 
 .aside {
+    width: 30%;
     background: gold;
 }
 
 .footer {
+    position: absolute;
+    bottom: 0;
+    float: left;
     background: hotpink;
 }
 
 
-/* things you may like to experiment with */
-
+/* use a class to set common styles for columns */
 .column {
-
+    float: left;
 }
 
-/* try changing paragraph styles - margin: 16px */
+/* give the paragraphs some breathing room */
 p {
-
+    margin: 16px;
 }
 
 /* try float or using this clearfix hack */
