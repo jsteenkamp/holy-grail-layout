@@ -1,4 +1,14 @@
-#Holy Grail Layout
+#CSS for Developers
+
+This is part of the CSS for Developers series.
+
+  - [Part 1 - The Real Problems](https://docs.google.com/presentation/d/16-Y2qcXDytMDvBujmTY05OQU4sbz4UnENn_JKT938oA/)
+  - [Part 2 - Holy Grail and SCSS](https://docs.google.com/presentation/d/16-Y2qcXDytMDvBujmTY05OQU4sbz4UnENn_JKT938oA/)
+  - [Part 3 - Modular CSS](https://docs.google.com/presentation/d/16-Y2qcXDytMDvBujmTY05OQU4sbz4UnENn_JKT938oA/edit#slide=id.p)
+
+The presentations are also available in PDF together with notes in the /pdf folder. The notes contain links to useful resources and some exercises.
+
+##Holy Grail Layout
 
 The Holy Grail layout is an excellent way to learn the basics of CSS layout.
 
@@ -14,20 +24,6 @@ We’ll tackle the problem by first attempting to solve it using traditional (�
 
 The Holy Grail layout is not really that useful today as designs have progressed and adapted to needs of varied devices.
 
+##SCSS (Sass)
 
-##CSS Layout
-
-Files: /holy-grail-layout/css-traditional 
-
-First visit the excellent [Learn Layout](http://learnlayout.com/) step-by-step tutorial.
-
-This will give you all everything you need and also has a section on Flexbox.
-
-As mentioned in the Wikipedia article there are many approaches to solving the HG layout. 
-
-I recommend trying with float and position absolute for the footer. HTML tables are not a “valid” solution!
-
-You should be able to get close. Make sure to test with varying amounts of content in the columns and resizing your browser so vertical scrolling is activated.
-
-The main problem that remains after getting the layout working is that the column colors do not extend to full height. 
-
+To work with the SCSS examples you require a SCSS pre-processor. Popular IDEs support SCSS via plug-ins. Alternatively you can install Node and use a Gulp task.
